@@ -19,7 +19,7 @@ contract SingleAccountBank {
         require(msg.sender == owner, "Only the owner can withdraw");
         require(balance >= amount, "Insufficient balance");
         balance -= amount;
-        payable(owner).transfer(amount);
+        
     }
 
     function checkBalance() public view returns (uint) {
